@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TodayInHistory.API", "Today
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TodayInHistory.API.Tests", "TodayInHistory.API.Tests\TodayInHistory.API.Tests.csproj", "{D5F43FC6-66AE-4A69-B7FC-3DB353C09C4A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TodayInHistory.Domain", "TodayInHistory.Domain\TodayInHistory.Domain.csproj", "{5659C323-F15E-4115-96FE-65AA8986CF36}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TodayInHistory.Repository", "TodayInHistory.Repository\TodayInHistory.Repository.csproj", "{3D4AE854-8465-4242-A6C3-5C725815E289}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{D5F43FC6-66AE-4A69-B7FC-3DB353C09C4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D5F43FC6-66AE-4A69-B7FC-3DB353C09C4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D5F43FC6-66AE-4A69-B7FC-3DB353C09C4A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5659C323-F15E-4115-96FE-65AA8986CF36}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5659C323-F15E-4115-96FE-65AA8986CF36}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5659C323-F15E-4115-96FE-65AA8986CF36}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5659C323-F15E-4115-96FE-65AA8986CF36}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3D4AE854-8465-4242-A6C3-5C725815E289}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D4AE854-8465-4242-A6C3-5C725815E289}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D4AE854-8465-4242-A6C3-5C725815E289}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D4AE854-8465-4242-A6C3-5C725815E289}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
