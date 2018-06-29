@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TodayInHistory.Domain
+namespace TodayInHistory.Domain.Interfaces
 {
-    public class Class1
+    public interface ICategoriaRepositorio
     {
+        List<Categoria> ObtenerCategorias();
     }
 }
