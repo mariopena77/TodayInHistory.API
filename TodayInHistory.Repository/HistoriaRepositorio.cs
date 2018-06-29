@@ -28,6 +28,9 @@ namespace TodayInHistory.Repository
 
             using (DbCommand cmd = db.GetStoredProcCommand(Procedimientos.ObtenerHistorias))
             {
+                db.AddInParameter(cmd, "@mes", DbType.Int32, mes);
+                db.AddInParameter(cmd, "@dia", DbType.Int32, dia);
+
                 using (IDataReader reader = db.ExecuteReader(cmd))
                 {
                     while (reader.Read())
