@@ -6,21 +6,34 @@ using System.Net.Http;
 using System.Web.Http;
 using TodayInHistory.Domain;
 using TodayInHistory.Repository;
+using WebApi.OutputCache.V2;
 
 namespace TodayInHistory.API.Controllers
 {
+    [RoutePrefix("api")]
     public class HistoriaController : ApiController
     {
-        public IHttpActionResult Get()
+        [HttpGet]
+        [Route("historia/{mes}/{dia}")]
+        [CacheOutput(ClientTimeSpan = 100, ServerTimeSpan = 100)]
+        public IHttpActionResult Get(int mes, int dia)
         {
             try
             {
                 Domain.Interfaces.IHistoriaRepositorio repositorio = new HistoriaRepositorio("CONEXION");
                 Historia historia = new Historia(repositorio);
 
-                return Ok(historia.ObtenerHistorias(6, 29));
+                var listaHistorias = historia.ObtenerHistorias(mes, dia);
+                if (listaHistorias.Count == 0)
+                {
+                    return NotFound();
+                }
+                else
+                {
+                    return Ok(listaHistorias);
+                }                
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return InternalServerError();                
             }
